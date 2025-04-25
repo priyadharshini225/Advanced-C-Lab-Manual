@@ -128,11 +128,42 @@ To write a C program to insert an element in doubly linked list
  
 ## Program:
 
-//type your code here
+```
+struct Node
+{
+   struct Node *prev;
+   struct Node *next;
+   float data;
+}*head;
+void insert(float data)
+{
+    struct Node *n=(struct Node*)malloc(sizeof(struct Node));
+    struct Node *temp;
+    if(head==NULL)
+    {
+       head=n;
+       n->data=data;
+       n->next=NULL;
+       n->prev=NULL;
+       temp=head;
+    }
+    else
+    {
+       while(temp->next!=NULL)
+       {
+          temp=temp->next;
+       }
+       n->data=data;
+       n->next=NULL;
+       n->prev=temp;
+       temp->next=n;
+     }
+}
+```
 
 ## Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/b588e00b-3078-4684-a7d6-ee89537ed78a)
 
 
 ## Result:
@@ -141,15 +172,12 @@ Thus, the program to insert an element in doubly linked list is verified success
 
 
 
-EXP NO:20 C FUNCTION TO DELETE A GIVEN ELEMENT IN THE GIVEN LINKED LIST
+# EXP NO:20 C FUNCTION TO DELETE A GIVEN ELEMENT IN THE GIVEN LINKED LIST
 
-
-
-
-Aim:
+## Aim:
 To write a C function that deletes a given element from a linked list.
 
-Algorithm:
+## Algorithm:
 1.	Check if the Linked List is Empty:
 o	If the head of the linked list is NULL, print a message indicating the list is empty and exit the function.
 2.	Traverse the Linked List:
@@ -168,11 +196,34 @@ o	If the element is not found in any node, print a message indicating the elemen
 6.	End the Function.
 
 
-Program:
+## Program:
 
-//type your code here
+struct Node{
+    char data; 
+    struct Node *next;
+}*head;
+void delete()
+{
+    if(head==NULL){
+        printf("List is empty\n");
+        return;
+    }
+    else if(head->next==NULL){
+        head=NULL;
+        free(head);
+        printf("Node deleted from the begining ...\n");
+    }
+    else{
+        struct Node *ptr;
+        ptr=head;
+        head=head->next;
+        free(ptr);
+        printf("Node deleted from the begining ...\n");
+    }
+}
 
-Output:
+
+## Output:
 
 //paste your output here
 
@@ -180,7 +231,7 @@ Output:
 
 
 
-Result:
+## Result:
 Thus, the function that deletes a given element from a linked list is verified successfully.
 
 
