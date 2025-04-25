@@ -1,24 +1,57 @@
-EXP NO:16 C PROGRAM TO SEARCH A GIVEN ELEMENT IN THE GIVEN LINKED LIST.
-Aim:
+# EXP NO:16 C PROGRAM TO SEARCH A GIVEN ELEMENT IN THE GIVEN LINKED LIST.
+
+## Aim:
 To write a C program to search a given element in the given linked list.
 
-Algorithm:
+## Algorithm:
 1.	Define the structure for a node in a linked list.
 2.	Define the search function to find a specific character in the linked list.
 3.	Initialize the head of the linked list as needed.
 4.	Call the search function and perform other linked list operations as needed.
  
-Program:
+## Program:
 
-//type your code here
+```
+struct Node
+{
+   struct Node *next;
+   char data;
+}*head;
+void search(char data)
+{
+   struct Node *ptr;
+   char item=data;
+   int i=0,flag;
+   ptr = head;
+   if(ptr == NULL)
+   {
+     printf("Empty List\n");
+   }
+   else
+   {
+     while (ptr!=NULL)
+     {
+       if(ptr->data == item)
+       {
+          printf("item %c found at location %d ",item,i+1); flag=0;
+       }
+       i++;
+       ptr = ptr -> next;
+     }
+     if(flag!=0)
+     {
+        printf("Item not found\n");
+     }
+   }
+}
+```
 
-Output:
+## Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/ad1cc3f6-7686-4a2c-8b48-c7384377ffd3)
 
 
-
-Result:
+## Result:
 Thus, the program to search a given element in the given linked list is verified successfully.
 
 
