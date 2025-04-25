@@ -8,7 +8,7 @@ To write a C program to search a given element in the given linked list.
 2.	Define the search function to find a specific character in the linked list.
 3.	Initialize the head of the linked list as needed.
 4.	Call the search function and perform other linked list operations as needed.
- 
+
 ## Program:
 
 ```
