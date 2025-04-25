@@ -198,13 +198,16 @@ o	If the element is not found in any node, print a message indicating the elemen
 
 ## Program:
 
-struct Node{
+```
+struct Node
+{
     char data; 
     struct Node *next;
 }*head;
 void delete()
 {
-    if(head==NULL){
+    if(head==NULL)
+    {
         printf("List is empty\n");
         return;
     }
@@ -213,7 +216,8 @@ void delete()
         free(head);
         printf("Node deleted from the begining ...\n");
     }
-    else{
+    else
+    {
         struct Node *ptr;
         ptr=head;
         head=head->next;
@@ -221,14 +225,11 @@ void delete()
         printf("Node deleted from the begining ...\n");
     }
 }
-
+```
 
 ## Output:
 
-//paste your output here
-
-
-
+![image](https://github.com/user-attachments/assets/5db27fd3-c904-4eef-97d5-0c9e55ac9a4c)
 
 
 ## Result:
